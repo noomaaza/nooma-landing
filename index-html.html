@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Nooma — your mental space</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --text-primary:#e8e8e8;
+    --text-muted:rgba(232,232,232,0.55);
+    --accent:#e0483e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    font-family:'Inter',sans-serif;
+    color:var(--text-primary);
+    min-height:100vh;
+  }
+  .page{max-width:640px;margin:0 auto;padding:80px 32px 120px;}
+
+  /* HERO */
+  .hero{text-align:center;padding-bottom:0;}
+  .logo{
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    font-size:48px;
+    letter-spacing:-0.01em;
+    display:inline-block;
+  }
+  .tagline{
+    font-weight:400;
+    font-style:italic;
+    font-size:18px;
+    color:var(--text-primary);
+    margin-top:28px;
+  }
+
+  .mood-line{
+    text-align:center;
+    font-weight:400;
+    font-size:16px;
+    color:var(--text-muted);
+    margin-top:24px;
+  }
+
+  /* MODES — flat stacked list, no cards */
+  .modes{margin:48px 0;}
+  .mode-row{margin-bottom:64px;}
+  .mode-row:last-child{margin-bottom:0;}
+  .mode-name{
+    font-weight:400;
+    font-size:26px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .mode-emoji{font-size:24px;}
+  .mode-desc{
+    font-weight:400;
+    font-size:18px;
+    color:var(--text-primary);
+    margin-top:8px;
+  }
+
+  /* EMAIL — plain text field, no button chrome */
+  .email-row{margin-top:96px;}
+  .email-input{
+    width:100%;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid rgba(232,232,232,0.25);
+    outline:none;
+    padding:8px 0;
+    font-family:'Inter',sans-serif;
+    font-weight:400;
+    font-size:18px;
+    color:var(--text-primary);
+  }
+  .email-input::placeholder{color:var(--text-primary);opacity:0.9;}
+  .email-input:focus{border-bottom-color:var(--text-primary);}
+
+  @media (max-width:640px){
+    .logo{font-size:38px;}
+    .mode-name{font-size:22px;}
+    .mode-desc{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <section class="hero">
+    <div class="logo">Nooma</div>
+    <div class="tagline">most apps want your attention. nooma wants your mind back.</div>
+  </section>
+
+  <p class="mood-line">no noise. no feed. just you, and what's on your mind.</p>
+
+  <div class="modes">
+    <div class="mode-row">
+      <div class="mode-name">Overthink <span class="mode-emoji">🌃</span></div>
+      <div class="mode-desc">(Understand your thoughts.)</div>
+    </div>
+    <div class="mode-row">
+      <div class="mode-name">Ambition <span class="mode-emoji">🚀</span></div>
+      <div class="mode-desc">(Build your future.)</div>
+    </div>
+    <div class="mode-row">
+      <div class="mode-name">Interesting <span class="mode-emoji">🔭</span></div>
+      <div class="mode-desc">(Discover the unknown.)</div>
+    </div>
+  </div>
+
+  <div class="email-row">
+    <div id="beehiiv-form-wrapper"></div>
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="6728da8b-2aa0-463b-a6e8-5f14830371f0"></script>
+  </div>
+
+</div>
+</body>
+</html>
